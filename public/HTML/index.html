@@ -1,0 +1,64 @@
+<head>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div id="left-pane" class="pane">
+
+    <div class="image-container">
+      <img  id=image>
+    </div>
+
+
+    <div class="horizontal-list box" id="data"">
+      <div class="" id="urldata"></div>
+      <div id="img-tags"></div>
+    </div>
+
+    <div id=tag-controls class=txt-ctrl>
+      <input type="text" name="" value="" id="tag-txt">
+      <button type="button" id="tag-btn" >TAG</button>
+    </div>
+    <div id=jmp-controls class=txt-ctrl>
+      <input type="text" name="" value="" id="jmp-txt">
+      <button type="button" id="jmp-btn" >JUMP</button>
+    </div>
+
+    <div id="feedback"></div>
+  </div>
+
+  <div id=right-pane class="pane">
+    <div class="section-title box">FILTERS
+      <button type="button" id="filter-btn">FILTER</button>
+            <button type="button" id="fvt-btn" class="float-right-btn emj-btn"></button>
+            <button type="button" id="dup-btn" class="float-right-btn emj-btn"></button>
+            <button type="button" id="gst-btn" class="float-right-btn emj-btn"></button>
+
+
+    </div>
+
+    <div id="filter-lists">
+
+      <div class="filter-list-container box">
+        <div class="filter-list" id="folder-filters"></div>
+      </div>
+
+      <div class="filter-list-container box">
+        <button type="button" id="filter-all">ALL</button>
+        <button type="button" id="filter-none">NONE</button>
+        <div class="filter-list" id="tag-filters"></div>
+      </div>
+    </div>
+  </div>
+
+
+<script type="text/javascript" src="javascript/api.js"></script>
+
+<script type="text/javascript" src="https://unpkg.com/redux@4.0.1/dist/redux.js"></script>
+
+<script type="text/javascript" src="javascript/emoji.js"></script>
+
+<script type="text/javascript" src="javascript/javascript.js"></script>
+
+</body>

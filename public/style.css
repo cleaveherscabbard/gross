@@ -1,0 +1,56 @@
+.image-container {
+  max-height: 90vh;
+  max-width:75vw;
+  border:1px solid black;
+}
+img{
+  height:100%;
+  width:100%;
+  object-fit:contain;
+}
+button{
+  height: 20px;
+}
+
+#filter-lists{
+  display:inline-block;
+  width: auto;
+}
+
+.pane{
+  display: inline-block;
+}
+
+#left-pane{
+  float:left;
+  width: auto;
+}
+
+.box{
+  border: 1px solid black;
+  margin: 1px;
+}
+
+.filter-list-container{
+  display: inline-block;
+  width: auto;
+  vertical-align: top;
+}
+.horizontal-list{
+  display: flex;
+  flex-direction: row;
+}
+
+.txt-control{
+
+}
+
+.float-right-btn{
+  float: right;
+}
+
+.emj-btn{
+  border:none;
+  background-color: transparent;
+  cursor: pointer;
+}
