@@ -1,0 +1,18 @@
+create true false value for ghost method on image controller
+link image controller to ghost controller
+OR
+add soft delete column to db and get rid of the fucking ghost controller, since it's dumb
+
+create importable import files to quickly grab application components
+   maybe an import class
+   look into load path
+
+
+
+create config yaml and config importer
+
+a migration manager would be cool, and we never seem to be done with migrations
+
+maybe make a master class for all these tools you apparently need to build?
+
+at some point I should just be using rails, right

@@ -2,12 +2,14 @@ require 'sinatra'
 require 'sinatra/custom_logger'
 require 'logger'
 require 'byebug'
+require 'active_record'
 
-require_relative './public/ruby/imagesController'
-require_relative './public/ruby/tagsController'
-require_relative './public/ruby/favoritesController'
-require_relative './public/ruby/bespokeController'
+# require_relative './public/ruby/imagesController'
+# require_relative './public/ruby/tagsController'
+# require_relative './public/ruby/favoritesController'
+# require_relative './public/ruby/bespokeController'
 require_relative './db/readyDB.rb'
+require_relative 'app/imports/importAll.rb'
 
 set :logger, Logger.new(STDOUT)
 
@@ -27,10 +29,10 @@ get "/images/:image_id" do
   controller.get_image
 end
 
-post '/ghost/:image_id/ghost' do
-  controller = GhostsController.new params
-  controller.handle_favorite.to_json
-end
+# post '/ghost/:image_id/ghost' do
+#   controller = GhostsController.new params
+#   controller.handle_favorite.to_json
+# end
 
 
 # tags
@@ -45,14 +47,21 @@ get '/tags/:image_id' do
 end
 
 # favorites
-get '/favorites' do
-  controller = FavoritesController.new params
-  controller.get_favorites.to_json
+# get '/favorites' do
+#   # controller = FavoritesController.new params
+#   # controller.get_favorites.to_json
+# end
+#
+post '/favorites/:id' do
+  controller = ImagesController.new params
+#   controller = FavoritesController.new params
+  controller.favorite.to_json
 end
 
-post '/favorites/:image_id' do
-  controller = FavoritesController.new params
-  controller.handle_favorite.to_json
+post '/ghost/:id' do
+  controller = ImagesController.new params
+#   controller = FavoritesController.new params
+  controller.ghost.to_json
 end
 
 # ghost
