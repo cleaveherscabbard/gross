@@ -1,6 +1,6 @@
 # #!/usr/bin/env ruby
 require 'pry'
-require 'sqlite3'
+# require 'sqlite3'
 require 'byebug'
 require 'active_record'
 require_relative "app/imports/importModels.rb"

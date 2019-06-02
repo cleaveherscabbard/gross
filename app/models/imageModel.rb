@@ -3,7 +3,10 @@ class Image < ApplicationRecord
     class_name: "Tag",
     foreign_key: "image_id"
 
-  default_scope {where(softDeleted: false)}
+  # default_scope {where(softDeleted: false).where("name LIKE '%.mp4'")}
+  default_scope {where(softDeleted: false).where("name NOT LIKE '%.mp4'")}
+
+  scope :movies, ->{where("name LIKE '%.mp4'")}
   scope :favorites, -> {where(favorite: true)}
   scope :in_folders, ->(*args){
     where(folder: args)
@@ -20,6 +23,8 @@ class Image < ApplicationRecord
   def self.folders
     all.map{|e|e.folder}
   end
+
+
 
   def initialize(params)
     @params = params
