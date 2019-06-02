@@ -1,12 +1,8 @@
-create true false value for ghost method on image controller
 link image controller to ghost controller
-OR
-add soft delete column to db and get rid of the fucking ghost controller, since it's dumb
 
 create importable import files to quickly grab application components
    maybe an import class
    look into load path
-
 
 
 create config yaml and config importer

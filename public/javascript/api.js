@@ -7,7 +7,7 @@ function getImage(image_id, callback){
 }
 
 function postGhostImage(image_id, data, callback){
-  $.post(`/images/${image_id}/ghost`, data, callback);
+  $.post(`/ghost/${image_id}`, data, callback);
 }
 
 function postTagImage(image_id, data, callback){

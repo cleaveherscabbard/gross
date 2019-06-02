@@ -13,7 +13,7 @@ function main(){
       favorites: new Set()
     };
 
-    this.image = document.getElementById("image");
+    this.content = document.getElementById("content");
     this.urldata = document.getElementById("urldata");
 
     this.img_tags = document.getElementById("img-tags");
@@ -94,7 +94,7 @@ function main(){
 
   function updateImageState(image_id){
     src = `http://localhost:4567/images/${image_id}`;
-    image.src = src;
+    content.src = src;
 
     urldata.innerHTML = state['image_id']+": ";
 
@@ -179,17 +179,20 @@ function main(){
     return tagFilters;
   }
 
+  function getNextImageId(){
+    if(state.image_id===state.image_ids[state.image_ids.length-1]){
+      return state.image_ids[0];
+    } else {
+      let currentIndex = state.image_ids.indexOf(state.image_id);
+      return state.image_ids[currentIndex+1];
+    }
+  }
 
   function addKeyControls(){
     document.addEventListener("keydown", handleKeyDown);
     function handleKeyRight(){
       let newState = {};
-      if(state.image_id===state.image_ids[state.image_ids.length-1]){
-        newState = {  image_id: state.image_ids[0] };
-      } else {
-        let index = state.image_ids.indexOf(state.image_id);
-        newState = {image_id: state.image_ids[index+1]};
-      }
+      newState["image_id"] = getNextImageId();
       updateState(newState);
     }
 
@@ -253,14 +256,17 @@ function main(){
     function handleGhostImageResponse(JSONData){
       let data = JSON.parse(JSONData);
       let message = data.message;
-      updateState({message});
+      let image_ids = data.image_ids;
+      let image_id = getNextImageId();
+      updateState({image_ids, image_id});
     }
 
     function ghostImage(e){
       e.preventDefault();
       tag_filters = getTagFilters();
       postGhostImage(
-        {image_id: state.image_id, tag_filters},
+        state.image_id,
+        {tag_filters},
         handleGhostImageResponse
       );
     }
@@ -332,8 +338,8 @@ function main(){
   addKeyControls();
   initializeTagButton();
   initializeFavoriteButton();
+  initializeGhostButton();
   initializeFilterButton();
-
 }
 
 
