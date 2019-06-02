@@ -13,7 +13,7 @@ function main(){
       favorites: new Set()
     };
 
-    this.image = document.getElementById("content");
+    this.content = document.getElementById("content");
     this.urldata = document.getElementById("urldata");
 
     this.img_tags = document.getElementById("img-tags");
@@ -94,7 +94,7 @@ function main(){
 
   function updateImageState(image_id){
     src = `http://localhost:4567/images/${image_id}`;
-    image.src = src;
+    content.src = src;
 
     urldata.innerHTML = state['image_id']+": ";
 
@@ -253,9 +253,6 @@ function main(){
   }
 
   function initializeGhostButton(){
-
-
-
     function handleGhostImageResponse(JSONData){
       let data = JSON.parse(JSONData);
       let message = data.message;
@@ -343,7 +340,6 @@ function main(){
   initializeFavoriteButton();
   initializeGhostButton();
   initializeFilterButton();
-
 }
 
 

@@ -24,8 +24,6 @@ class Image < ApplicationRecord
     all.map{|e|e.folder}
   end
 
-
-
   def initialize(params)
     @params = params
   end
