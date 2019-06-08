@@ -224,6 +224,10 @@ function main(){
       if(k=="Enter"){
 
       }
+      if(k=="9"){
+        e.preventDefault();
+        gst_btn.click();
+      }
     }
   }
 

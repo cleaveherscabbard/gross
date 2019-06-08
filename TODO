@@ -1,4 +1,3 @@
-link image controller to ghost controller
 
 create importable import files to quickly grab application components
    maybe an import class
@@ -12,3 +11,17 @@ a migration manager would be cool, and we never seem to be done with migrations
 maybe make a master class for all these tools you apparently need to build?
 
 at some point I should just be using rails, right
+
+a) split up javascript into many files
+b) picture/video content swap
+c) state class, check out fluuuuuux
+
+
+1) front end tests
+2) back end tests
+3) integrate node, build tool, react-redux WOULD be nice.
+
+
+?)Implement a blog portion
+!)Serve over local network
+)G zbetter filters
