@@ -1,17 +1,30 @@
-class State{
-  constructor(){
-      this.image_ids = {},
-      this.image_id = 1,
-      this.available_folders = [],
-      this.available_tags = [],
-      favorites: new Set()
+export default class StateManager{
+  constructor(obj){
+    Object.keys(obj).forEach((key)=>{
+      this[key] = obj[key]
+    })
   }
 
   update(newState){
     keys = Object.keys(newState);
 
-    
+
+  }
+
+  addProp(name,value){
+    this[name] = value;
   }
 
 
 }
+
+
+//
+// export function getGrossState(){
+//   state = new StateManager();
+//   state.add("image_ids", []);
+//   state.add("image_id", 1);
+//   state.add(available_folders, []);
+//   state.add("available_tags", []);
+//   state.add("favorites": new Set());
+// }

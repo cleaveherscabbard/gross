@@ -1,34 +1,36 @@
+"use strict";
+import emoji from './emoji.js';
+import StateManager from "./state.js";
 
 
-// TODO add mark as duplicate button
+
 function main(){
   function initialize(){
 
-    // the db image_id starts at 1, not 0, and for some reason I'm hellbent on doing this a certain way
-    this.state = {
+    let state = new StateManager({
       image_ids: [],
       image_id: 1,
       available_folders: [],
       available_tags: [],
       favorites: new Set()
-    };
+    });
 
-    this.content = document.getElementById("content");
-    this.urldata = document.getElementById("urldata");
+    let content = document.getElementById("content");
+    let urldata = document.getElementById("urldata");
 
-    this.img_tags = document.getElementById("img-tags");
-    this.tag_txt = document.getElementById("tag-txt");
-    this.tag_btn= document.getElementById("tag-btn");
+    let img_tags = document.getElementById("img-tags");
+    let tag_txt = document.getElementById("tag-txt");
+    let tag_btn= document.getElementById("tag-btn");
 
-    this.filter_btn = document.getElementById("filter-btn");
-    this.all_btn = document.getElementById("filter-all");
-    this.none_btn = document.getElementById("filter-none");
-    this.tag_filters = document.getElementById("tag-filters");
-    this.fvt_btn = document.getElementById("fvt-btn");
-    this.gst_btn = document.getElementById("gst-btn");
-    this.dup_btn = document.getElementById("dup-btn");
+    let filter_btn = document.getElementById("filter-btn");
+    let all_btn = document.getElementById("filter-all");
+    let none_btn = document.getElementById("filter-none");
+    let tag_filters = document.getElementById("tag-filters");
+    let fvt_btn = document.getElementById("fvt-btn");
+    let gst_btn = document.getElementById("gst-btn");
+    let dup_btn = document.getElementById("dup-btn");
 
-    this.feedback = document.getElementById("feedback");
+    let feedback = document.getElementById("feedback");
 
 
     getState((JSONdata)=>{

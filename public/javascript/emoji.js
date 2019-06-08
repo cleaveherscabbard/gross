@@ -1,9 +1,11 @@
 //and That Was How We Got Button Graphics
 
-emoji={
+const emoji={
   no: "⛔",
   ghost: "👻",
   moon_on: "🌕",
   moon_off: "🌑",
   gemini: "♊"
 }
+
+export default emoji;
