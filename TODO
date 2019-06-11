@@ -13,6 +13,8 @@ maybe make a master class for all these tools you apparently need to build?
 at some point I should just be using rails, right
 
 a) split up javascript into many files
+  a.1)split up state manager into core logic and gross specific actions
+  a.2)do we need to ship react and redux?
 b) picture/video content swap
 c) state class, check out fluuuuuux
 
