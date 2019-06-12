@@ -7,5 +7,3 @@ const emoji={
   moon_off: "🌑",
   gemini: "♊"
 }
-
-export default emoji;
