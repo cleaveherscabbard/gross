@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "babelfile": "npx babel public/react/src --out-file public/javascript/react.js --presets react-app/prod",
+    "babeldir": "npx babel public/react/src --out-dir public/react/cmp --presets react-app/prod"
   },
   "repository": {
     "type": "git",
@@ -16,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/cleaveherscabbard/gross/issues"
   },
-  "homepage": "https://github.com/cleaveherscabbard/gross#readme"
+  "homepage": "https://github.com/cleaveherscabbard/gross#readme",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-react-app": "^3.1.2"
+  }
 }

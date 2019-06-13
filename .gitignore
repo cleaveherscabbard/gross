@@ -11,6 +11,9 @@ gross.db
 /.pnp
 .pnp.js
 
+package-lock.json
+public/javascript/react.js
+
 # testing
 /coverage
 

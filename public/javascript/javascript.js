@@ -12,21 +12,21 @@ function main(){
       favorites: new Set()
     };
 
-    // this.content = document.getElementById("content");
+    this.content = document.getElementById("content");
 
-    ReactDOM.render(
-      React.createElement(
-        'img',
-        {id:"content", src: "/images/" + this.state.image_id},
-        null
-      ),
-    //     Content,null, null
-    //     // {
-    //           // image_id: state.image_id}
-    //           // src
+    // ReactDOM.render(
+    //   React.createElement(
+    //     'img',
+    //     {id:"content", src: "/images/" + this.state.image_id},
+    //     null
     //   ),
-      document.getElementById('content-container')
-    );
+    // //     Content,null, null
+    // //     // {
+    // //           // image_id: state.image_id}
+    // //           // src
+    // //   ),
+    //   document.getElementById('content-container')
+    // );
 
     this.urldata = document.getElementById("urldata");
 
