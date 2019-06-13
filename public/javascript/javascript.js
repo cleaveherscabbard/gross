@@ -12,7 +12,22 @@ function main(){
       favorites: new Set()
     };
 
-    this.content = document.getElementById("content");
+    // this.content = document.getElementById("content");
+
+    ReactDOM.render(
+      React.createElement(
+        'img',
+        {id:"content", src: "/images/" + this.state.image_id},
+        null
+      ),
+    //     Content,null, null
+    //     // {
+    //           // image_id: state.image_id}
+    //           // src
+    //   ),
+      document.getElementById('content-container')
+    );
+
     this.urldata = document.getElementById("urldata");
 
     this.img_tags = document.getElementById("img-tags");
@@ -92,7 +107,7 @@ function main(){
   }
 
   function updateImageState(image_id){
-    src = `http://localhost:4567/images/${image_id}`;
+    src = `/images/${image_id}`;
     content.src = src;
 
     urldata.innerHTML = state['image_id']+": ";

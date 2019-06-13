@@ -8,7 +8,7 @@
 
     <div id="content-container">
       <!-- <video  id=content type="video/mp4" controls> -->
-      <img  id=content>
+      <!-- <img  id=content> -->
     </div>
 
 
@@ -58,7 +58,18 @@
 
 <script type="text/javascript" src="javascript/emoji.js"></script>
 
+
+
+<!-- Load React. -->
+<!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+<script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
 <script type="text/javascript" src="javascript/javascript.js"></script>
+<script type="text/babel" src="react-components/content-container/content-container.jsx"></script>
+
+
 
 
 </body>
