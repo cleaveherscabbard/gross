@@ -1,16 +1,17 @@
 #TODO Env vars should be set by a config file
-LOAD_PATH = "C:/Users/John/Documents/ruby/gross/app"
+# also this should be run in a container
+LOAD_PATH = "/home/uberguby/Workspace/gross/app"
 $LOAD_PATH.unshift LOAD_PATH unless $LOAD_PATH.include? LOAD_PATH
 
-Dir.new(LOAD_PATH + "/abstractClasses").children.each do |child|
+Dir.children(LOAD_PATH + "/abstractClasses").each do |child|
   require "abstractClasses/" + child
 end
 
-Dir.new(LOAD_PATH + "/models").children.each do |child|
+Dir.children(LOAD_PATH + "/models").each do |child|
   require "models/" + child
 end
 
-Dir.new(LOAD_PATH + "/controllers").children.each do |child|
+Dir.children(LOAD_PATH + "/controllers").each do |child|
   require "controllers/" + child
 end
 

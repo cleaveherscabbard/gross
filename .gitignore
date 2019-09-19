@@ -2,7 +2,9 @@
 /db/backups/
 gross.db
 .byebug_history
-
+.idea/
+.bundle/
+vendor/
 
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 

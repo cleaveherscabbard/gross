@@ -1,6 +1,7 @@
 .content-container {
-  max-height: 90vh;
+  /* max-height: 90vh; */
   max-width:75vw;
+  min-width: 20vw;
   border:1px solid black;
 }
 #content{
@@ -18,7 +19,7 @@ button{
 }
 
 .pane{
-  display: inline-block;
+  display: inline;
 }
 
 #left-pane{

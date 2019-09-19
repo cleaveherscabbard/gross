@@ -17,6 +17,7 @@ a) split up javascript into many files
   a.2)do we need to ship react and redux?
 b) picture/video content swap
 c) state class, check out fluuuuuux
+d) add author table
 
 
 1) front end tests
@@ -27,3 +28,6 @@ c) state class, check out fluuuuuux
 ?)Implement a blog portion
 !)Serve over local network
 )G zbetter filters
+
+
+
