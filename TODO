@@ -1,4 +1,6 @@
 
+filter by image properties like size?
+
 create importable import files to quickly grab application components
    maybe an import class
    look into load path
@@ -11,6 +13,8 @@ a migration manager would be cool, and we never seem to be done with migrations
 maybe make a master class for all these tools you apparently need to build?
 
 at some point I should just be using rails, right
+
+fuzzy search when imputting tags
 
 a) split up javascript into many files
   a.1)split up state manager into core logic and gross specific actions

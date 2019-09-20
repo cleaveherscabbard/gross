@@ -1,8 +1,4 @@
-
-
 class Root extends React.Component {
-
-
   render(){
     return (
       <div className="pane" id="root">

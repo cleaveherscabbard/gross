@@ -11,7 +11,7 @@ require 'active_record'
 # require_relative './public/ruby/favoritesController'
 # require_relative './public/ruby/bespokeController'
 #require_relative './db/readyDB.rb'
-# 
+#  
 require_relative 'app/imports/importAll.rb'
 
 set :logger, Logger.new(STDOUT)

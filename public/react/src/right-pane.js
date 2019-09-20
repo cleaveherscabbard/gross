@@ -33,8 +33,8 @@ class RightPane extends React.Component {
         </div>
 
         <div id="filter-lists">
-          <FilterList idt="folder"/>
-          <FilterList idt="tag" />
+            <FilterList idt="tag" />
+            <FilterList idt="folder"/>
         </div>
 
       </div>

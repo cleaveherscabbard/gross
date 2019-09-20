@@ -172,6 +172,8 @@ function main(){
   }
 
   function getRandomImageId(ary){
+    //for selecting specific pictures
+    // return 180;
     return ary[Math.floor(Math.random()*ary.length)];
   }
 

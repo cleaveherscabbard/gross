@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "babelfile": "npx babel public/react/src --out-file public/javascript/react.js --presets react-app/prod",
-    "babeldir": "npx babel public/react/src --out-dir public/react/cmp --presets react-app/prod"
+    "babeldir": "npx babel public/react/src --out-dir public/react/cmp --presets react-app/prod",
+    "babelwatch": "npx babel public/react/src --watch --out-file public/javascript/react.js --source-maps --presets react-app/prod"
   },
   "repository": {
     "type": "git",

@@ -1,14 +1,14 @@
-.content-container {
-  /* max-height: 90vh; */
-  max-width:75vw;
+body{
+  margin-top: 2px;
+}
+
+#content{
   min-width: 20vw;
+  max-height: 94.5vh;
   border:1px solid black;
 }
-#content{
-  height:100%;
-  width:100%;
-  object-fit:contain;
-}
+
+
 button{
   height: 20px;
 }
@@ -18,13 +18,17 @@ button{
   width: auto;
 }
 
-.pane{
-  display: inline;
-}
-
 #left-pane{
   float:left;
   width: auto;
+  max-width: 85vw;
+}
+
+#right-pane{
+  /*float: right;*/
+  max-width: 50vw;
+  /*border: #0000FF solid 1px;*/
+  display: inline-block;
 }
 
 .box{
@@ -37,13 +41,9 @@ button{
   width: auto;
   vertical-align: top;
 }
-.horizontal-list{
+.horizontal-list {
   display: flex;
   flex-direction: row;
-}
-
-.txt-control{
-
 }
 
 .float-right-btn{
