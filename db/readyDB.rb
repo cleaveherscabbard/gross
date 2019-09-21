@@ -1,3 +1,6 @@
+require 'rubygems'
+require 'bundler/setup'
+
 require "sqlite3"
 require "set"
 require "fileutils"
@@ -80,6 +83,7 @@ db.execute <<-SQL
   #    );
   #   SQL
 
+# update entries in folders
 media = Dir.new("library/media")
 media.each_child do |subd|
   alreadySaved = Set.new
