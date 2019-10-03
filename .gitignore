@@ -5,8 +5,9 @@ gross.db
 .idea/
 .bundle/
 vendor/
-gross.db
 
+
+public/javascript/react.js.map
 
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 

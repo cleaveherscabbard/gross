@@ -1,26 +1,4 @@
 'use strict';
-class Content extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = this.props.state
-    console.log(props);
-    // debugger
-    console.log("here");
-  }
-
-  render() {
-    let id = this.props.state.image_id;
-    debugger
-    const url = "http://localhost:4567/images/" + id;
-
-    return (
-      <img
-        id="content"
-        src={url}
-      />
-    );
-  }
-}
 
 class ContentData extends React.Component {
   render(){

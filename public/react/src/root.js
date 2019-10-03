@@ -1,6 +1,8 @@
 // import React from 'react';
 // import configureStore from  '.store/store';
 // import {Provider} from 'react-redux';
+// import { createStore } from 'redux';
+const store = require("./store.js");
 
 
 class Root extends React.Component {
