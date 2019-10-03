@@ -2,7 +2,9 @@
 // import configureStore from  '.store/store';
 // import {Provider} from 'react-redux';
 // import { createStore } from 'redux';
-const store = require("./store.js");
+// const store = require("./store.js");
+import LeftPane from './left-pane.jsx';
+import RightPane from './right-pane.jsx';
 
 
 class Root extends React.Component {
@@ -17,6 +19,7 @@ class Root extends React.Component {
         // debugger
         return (
             <div className="pane" id="root">
+                "Words here"
                 <LeftPane state={this.state}/>
                 <RightPane/>
             </div>
@@ -24,13 +27,7 @@ class Root extends React.Component {
     }
 }
 
-const state = {
-    image_ids: [],
-    image_id: 1,
-    available_folders: [],
-    available_tags: [],
-    favorites: new Set()
-};
 
-let rootContainer = document.querySelector('#root-container');
-ReactDOM.render(<Root state={state}/>, rootContainer);
+
+
+export default Root;

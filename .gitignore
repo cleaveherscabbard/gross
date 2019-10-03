@@ -5,7 +5,7 @@ gross.db
 .idea/
 .bundle/
 vendor/
-
+public/javascript/bundle.js
 
 public/javascript/react.js.map
 

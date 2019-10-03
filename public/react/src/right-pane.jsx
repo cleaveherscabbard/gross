@@ -1,5 +1,7 @@
 'use strict';
 
+import EmojiButton from './emoji-button.jsx'
+
 class FilterList extends React.Component {
 
   render(){
@@ -42,5 +44,4 @@ class RightPane extends React.Component {
   }
 }
 
-// let rightPaneContainer = document.querySelector('#right-pane-container');
-// ReactDOM.render(<RightPane />, rightPaneContainer);
+export default RightPane;
