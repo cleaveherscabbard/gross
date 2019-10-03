@@ -2,15 +2,21 @@
 class Content extends React.Component {
   constructor(props) {
     super(props);
+    this.state = this.props.state
     console.log(props);
+    // debugger
     console.log("here");
   }
 
   render() {
+    let id = this.props.state.image_id;
+    debugger
+    const url = "http://localhost:4567/images/" + id;
+
     return (
       <img
         id="content"
-        // src={'/images/' + this.props.img_id}
+        src={url}
       />
     );
   }
@@ -51,6 +57,7 @@ class LeftPane extends React.Component {
   constructor(props) {
     console.log("constructing left pane");
     super(props);
+    this.state = props.state;
   }
 
   renderFeedback(){
@@ -60,7 +67,7 @@ class LeftPane extends React.Component {
   render(){
     return (
       <div className="pane" id="left-pane">
-        <Content />
+        <Content state={this.state}/>
         <ContentData />
         <TagControls />
       </div>
